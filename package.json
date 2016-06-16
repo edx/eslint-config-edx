@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-edx-es5",
+  "version": "1.0.0",
+  "description": "ESLint config for edX repositories using ECMAScript 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edx/eslint-config-edx-es5.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "edx",
+    "mooc"
+  ],
+  "author": "Brian Jacobel",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/edx/eslint-config-edx-es5/issues"
+  },
+  "homepage": "https://github.com/edx/eslint-config-edx-es5#readme"
+}
