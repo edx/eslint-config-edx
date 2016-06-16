@@ -70,6 +70,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: edX is standardized on indenting all code with four spaces. The JavaScript community generally prefers two spaces; edX uses four because of our use of Python (see [PEP8](https://www.python.org/dev/peps/pep-0008/)) and the desire to have consistency in our codebases.
 - **Example**:
 
+        // Correct pattern
         var example = function () {
             if (numberOfSpaces !== 4) {
                 throw new Error('Use four spaces for indentation.');
@@ -85,7 +86,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: Disable the rule stating functions can only start with a capital letter if they are constructors.
 - **Example**:
 
-        // This is fine.
+        // Correct pattern
         var htmlFoo = HtmlUtils.HTML('foo');
 
 ####[`no-else-return`](http://eslint.org/docs/rules/no-else-return)
@@ -93,7 +94,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: An `else` block after an `if` which contains a `return` is allowed. Technically the `else` is redundant (and Airbnb disallows it), but this rule allows for more readable control flow.
 - **Example**:
 
-        // This is fine.
+        // Correct pattern
         if (fooString === 'foo') {
             return 30;
         } else {
@@ -110,7 +111,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: Do not redefine variables in a child scope that are already declared in the upper scope.
 - **Example**:
 
-        // This will result in a linter error
+        // Linter error
         var foo = 'bar';
         if (fizz) {
             var foo = 'buzz';
@@ -138,7 +139,6 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
             fizz = 'buzz',
             foz = 49;
     }
-
     // Linter error
     function () {
         var fizz = 'buzz';
