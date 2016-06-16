@@ -50,70 +50,117 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 
 ####[`camelcase`](http://eslint.org/docs/rules/camelcase)
 - **Setting**: `["error", {"properties": "always"}]`
-- **Explanation**:
+- **Explanation**: Use camelCase for JavaScript variable, function and property names. (Airbnb style is to not enforce property names.)
 - **Example**:
+
+        var useVariableNamesLikeThis,
+            andLikeThis = {
+                evenHere: function yepHereToo() {
+
+                }
+            };
+
 
 ####[`func-names`](http://eslint.org/docs/rules/func-names)
 - **Setting**: `"off"`
-- **Explanation**:
-- **Example**:
-
-####[`global-require`](http://eslint.org/docs/rules/global-require)
-- **Setting**: `"off"`
-- **Explanation**:
-- **Example**:
+- **Explanation**: Ignore this rule, it doesn't play nicely with RequireJS code.
 
 ####[`indent`](http://eslint.org/docs/rules/indent)
 - **Setting**: `["error", 4]`
-- **Explanation**:
+- **Explanation**: edX is standardized on indenting all code with four spaces. The JavaScript community generally prefers two spaces; edX uses four because of our use of Python (see [PEP8](https://www.python.org/dev/peps/pep-0008/)) and the desire to have consistency in our codebases.
 - **Example**:
+
+        var example = function () {
+            if (numberOfSpaces !== 4) {
+                throw new Error('Use four spaces for indentation.');
+            }
+        };
 
 ####[`max-len`](http://eslint.org/docs/rules/max-len)
 - **Setting**: `["error", 120]`
-- **Explanation**:
-- **Example**:
+- **Explanation**: Use a maximum of 120 characters on a line. (The Airbnb default is 100, which we feel is too low.)
 
 ####[`new-cap`](http://eslint.org/docs/rules/new-cap)
 - **Setting**: `"off"`
-- **Explanation**:
+- **Explanation**: Disable the rule stating functions can only start with a capital letter if they are constructors.
 - **Example**:
 
-####[`no-console`](http://eslint.org/docs/rules/no-console)
-- **Setting**: `"off"`
-- **Explanation**:
-- **Example**:
+        // This is fine.
+        var htmlFoo = HtmlUtils.HTML('foo');
 
 ####[`no-else-return`](http://eslint.org/docs/rules/no-else-return)
 - **Setting**: `"off"`
-- **Explanation**:
+- **Explanation**: An `else` block after an `if` which contains a `return` is allowed. Technically the `else` is redundant (and Airbnb disallows it), but this rule allows for more readable control flow.
 - **Example**:
+
+        // This is fine.
+        if (fooString === 'foo') {
+            return 30;
+        } else {
+            return 50;
+        }
 
 ####[`no-invalid-this`](http://eslint.org/docs/rules/no-invalid-this)
 - **Setting**: `"error"`
-- **Explanation**:
-- **Example**:
+- **Explanation**: Do not use `this` outside of classes. Using strict mode, `this` can be undefined in these cases.
+- **Example**: See [the ESLint `no-invalid-this` docs](http://eslint.org/docs/rules/no-invalid-this) for examples of allowed and disallowed behavior.
 
 ####[`no-shadow`](http://eslint.org/docs/rules/no-shadow)
 - **Setting**: `"error"`
-- **Explanation**:
+- **Explanation**: Do not redefine variables in a child scope that are already declared in the upper scope.
 - **Example**:
+
+        // This will result in a linter error
+        var foo = 'bar';
+        if (fizz) {
+            var foo = 'buzz';
+        }
 
 ####[`object-curly-spacing`](http://eslint.org/docs/rules/object-curly-spacing)
 - **Setting**: `["error", "never"]`
-- **Explanation**:
+- **Explanation**: Do not insert extra spaces inside of curly brackets.
 - **Example**:
+
+        // Correct pattern
+        var obj = {foo: 42}
+
+        // Linter error
+        var obj2 = { foo: 42 }
 
 ####[`one-var`](http://eslint.org/docs/rules/one-var)
 - **Setting**: `["error", "always"]`
-- **Explanation**:
+- **Explanation**: Only use one variable declaration per function. This reinforces awareness of ES5's block scoping and hoisting, which can reduce bugs.
 - **Example**:
 
-####[`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
-- **Setting**: `["error", "never"]`
-- **Explanation**:
+    // Correct pattern
+    function () {
+        var foo, bar, baz,
+            fizz = 'buzz',
+            foz = 49;
+    }
+
+    // Linter error
+    function () {
+        var fizz = 'buzz';
+
+        if (foo) {
+            var baz = 'bar';
+        }
+    }
+
+####[`one-var-declaration-per-line`](http://eslint.org/docs/rules/one-var-declaration-per-line)
+- **Setting**: `["error", "initializations"]`
+- **Explanation**: Variables that are not initialized can be declared on the same line. Only one initialization is allowed per line.
 - **Example**:
+
+        // Correct pattern
+        var foo, bar,
+            fizz = 'buzz';
+
+        // Linter error
+        var foo, bar, fizz = 'buzz';
 
 ####[`strict`](http://eslint.org/docs/rules/strict)
-- **Setting**: `"off"`
-- **Explanation**:
-- **Example**:
+- **Setting**: `["error", "function"]`
+- **Explanation**: Every top-level function declaration must have a `"use strict";` in it. Do not use `"use strict";` anywhere else.
+- **Example**: See the [ESLint `strict` rule docs](http://eslint.org/docs/rules/strict) and the [MDN strict mode docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
