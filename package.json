@@ -4,7 +4,7 @@
   "description": "ESLint config for edX JavaScript code.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/edx/eslint-config-edx#readme",
   "dependencies": {
     "eslint-config-airbnb-base": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.12.0"
   }
 }
