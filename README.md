@@ -133,20 +133,20 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: Only use one variable declaration per function. This reinforces awareness of ES5's block scoping and hoisting, which can reduce bugs.
 - **Example**:
 
-    // Correct pattern
-    function () {
-        var foo, bar, baz,
-            fizz = 'buzz',
-            foz = 49;
-    }
-    // Linter error
-    function () {
-        var fizz = 'buzz';
-
-        if (foo) {
-            var baz = 'bar';
+        // Correct pattern
+        function () {
+            var foo, bar, baz,
+                fizz = 'buzz',
+                foz = 49;
         }
-    }
+        // Linter error
+        function () {
+            var fizz = 'buzz';
+
+            if (foo) {
+                var baz = 'bar';
+            }
+        }
 
 ####[`one-var-declaration-per-line`](http://eslint.org/docs/rules/one-var-declaration-per-line)
 - **Setting**: `["error", "initializations"]`
