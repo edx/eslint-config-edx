@@ -48,19 +48,6 @@ For the most part, edX follows the thoroughly documented [Airbnb JavaScript Styl
 
 In addition to the base Airbnb rules, edX adds or extends several of our own. They are described below.
 
-####[`camelcase`](http://eslint.org/docs/rules/camelcase)
-- **Setting**: `["error", {"properties": "always"}]`
-- **Explanation**: Use camelCase for JavaScript variable, function and property names. (Airbnb style is to not enforce property names.)
-- **Example**:
-
-        var useVariableNamesLikeThis,
-            andLikeThis = {
-                evenHere: function yepHereToo() {
-
-                }
-            };
-
-
 ####[`func-names`](http://eslint.org/docs/rules/func-names)
 - **Setting**: `"off"`
 - **Explanation**: Ignore this rule, it doesn't play nicely with RequireJS code.
@@ -139,6 +126,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
                 fizz = 'buzz',
                 foz = 49;
         }
+
         // Linter error
         function () {
             var fizz = 'buzz';
@@ -159,6 +147,39 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 
         // Linter error
         var foo, bar, fizz = 'buzz';
+
+####[`quote-props`](http://eslint.org/docs/rules/quote-props)
+- **Setting**: `["error", "consistent"]`
+- **Explanation**: If no properties of an object need to be wrapped in quotes (i.e., they are all camelCased strings), then they may remain unwrapped by quotes. If any object property requires quotes, then wrap all object properties in quotes regardless of their individual need for it.
+- **Example**:
+
+        // Correct patterns
+        var foo = {
+            bar: 'buzz',
+            biff: 'bop'
+        }
+
+        var foo2 = {
+            'bar': 'buzz',
+            'uh-oh-kebab-cased': 'bop'
+        }
+
+        // Linter errors
+        var foo = {
+            'bar': 'buzz',
+            'biff': 'bop'
+        }
+
+        var foo2 = {
+            bar: 'buzz',
+            'uh-oh-kebab-cased': 'bop'
+        }
+
+        // Syntax error
+        var foo2 = {
+            bar: 'buzz',
+            uh-oh-kebab-cased: 'bop'
+        }
 
 ####[`strict`](http://eslint.org/docs/rules/strict)
 - **Setting**: `["error", "function"]`
