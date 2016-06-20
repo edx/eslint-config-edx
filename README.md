@@ -58,7 +58,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Example**:
 
         // Correct pattern
-        var example = function () {
+        var example = function() {
             if (numberOfSpaces !== 4) {
                 throw new Error('Use four spaces for indentation.');
             }
@@ -121,14 +121,14 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Example**:
 
         // Correct pattern
-        function () {
+        function() {
             var foo, bar, baz,
                 fizz = 'buzz',
                 foz = 49;
         }
 
         // Linter error
-        function () {
+        function() {
             var fizz = 'buzz';
 
             if (foo) {
@@ -181,7 +181,30 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
             uh-oh-kebab-cased: 'bop'
         }
 
+####[`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
+- **Setting**: `["error", "never"]`
+- **Explanation**: Do not add a space between a function and the opening parentheses containing its arguments, whether the function is anonymous or named.
+- **Example**:
+
+        // Correct patterns
+        function foo(arg) {
+
+        }
+
+        var bar = function() {
+
+        };
+
+        // Linter errors
+        function foo (arg) {
+
+        }
+
+        var bar = function () {
+
+        };
+
 ####[`strict`](http://eslint.org/docs/rules/strict)
 - **Setting**: `["error", "function"]`
-- **Explanation**: Every top-level function declaration must have a `"use strict";` in it. Do not use `"use strict";` anywhere else.
+- **Explanation**: Every top-level function declaration must have a `'use strict';` in it. Do not use `'use strict';` anywhere else.
 - **Example**: See the [ESLint `strict` rule docs](http://eslint.org/docs/rules/strict) and the [MDN strict mode docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
