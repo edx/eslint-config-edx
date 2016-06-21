@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bjacobel/eslint-config-edx.git"
+    "url": "git+https://github.com/edx/eslint-config-edx.git"
   },
   "keywords": [
     "eslint",
@@ -23,6 +23,9 @@
   "homepage": "https://github.com/edx/eslint-config-edx#readme",
   "dependencies": {
     "eslint-config-airbnb-base": "^3.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^2.12.0"
   },
   "devDependencies": {
     "eslint": "^2.12.0"
