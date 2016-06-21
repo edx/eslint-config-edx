@@ -88,11 +88,6 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
             return 50;
         }
 
-####[`no-invalid-this`](http://eslint.org/docs/rules/no-invalid-this)
-- **Setting**: `"error"`
-- **Explanation**: Do not use `this` outside of classes. Using strict mode, `this` can be undefined in these cases.
-- **Example**: See [the ESLint `no-invalid-this` docs](http://eslint.org/docs/rules/no-invalid-this) for examples of allowed and disallowed behavior.
-
 ####[`no-shadow`](http://eslint.org/docs/rules/no-shadow)
 - **Setting**: `"error"`
 - **Explanation**: Do not redefine variables in a child scope that are already declared in the upper scope.
