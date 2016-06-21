@@ -111,8 +111,8 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
         var obj2 = { foo: 42 }
 
 ####[`one-var`](http://eslint.org/docs/rules/one-var)
-- **Setting**: `["error", "always"]`
-- **Explanation**: Only use one variable declaration per function. This reinforces awareness of ES5's block scoping and hoisting, which can reduce bugs.
+- **Setting**: `["warn", "always"]`
+- **Explanation**: Prefer one variable declaration per function. This reinforces awareness of ES5's block scoping and hoisting, which can reduce bugs.
 - **Example**:
 
         // Correct pattern
@@ -122,7 +122,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
                 foz = 49;
         }
 
-        // Linter error
+        // Linter warning
         function() {
             var fizz = 'buzz';
 
