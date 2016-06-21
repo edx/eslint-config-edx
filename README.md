@@ -149,7 +149,7 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
         var foo, bar, fizz = 'buzz';
 
 ####[`quote-props`](http://eslint.org/docs/rules/quote-props)
-- **Setting**: `["error", "consistent"]`
+- **Setting**: `["error", "consistent-as-needed"]`
 - **Explanation**: If no properties of an object need to be wrapped in quotes (i.e., they are all camelCased strings), then they may remain unwrapped by quotes. If any object property requires quotes, then wrap all object properties in quotes regardless of their individual need for it.
 - **Example**:
 
