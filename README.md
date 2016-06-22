@@ -16,7 +16,7 @@ In order to standardize and enforce edX's JavaScript coding style across multipl
 
 ## License
 
-The code in this repository is licensed the Apache 2.0 license unless otherwise
+The code in this repository is released under the Apache 2.0 license unless otherwise
 noted. Please see the [LICENSE file](https://github.com/edx/eslint-config-edx/blob/master/LICENSE) for details.
 
 ## Dependencies
@@ -42,7 +42,7 @@ If you plan on adding additional customization, you can [configure your project 
 
 ## The Config
 
-Let's talk about what's in this ESLint config. edX maintains high-level documentation on the [Open edX Developer's Guide](http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/user_interface_development.html?highlight=ux#adding-a-ui-page) on how we write new JavaScript features, including our use of RequireJS, Underscore and Backbone. This document seeks to be a lower-level guide on the semantics of how we write JavaScript, including nuts and bolts about spacing, syntax, and variable naming.
+edX maintains high-level documentation on the [Open edX Developer's Guide](http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/user_interface_development.html?highlight=ux#adding-a-ui-page) on how we write new JavaScript features, including our use of RequireJS, Underscore and Backbone. This document seeks to be a lower-level guide on the semantics of how we write JavaScript, including nuts and bolts about spacing, syntax, and variable naming.
 
 For the most part, edX follows the thoroughly documented [Airbnb JavaScript Style Guide for ES5](https://github.com/airbnb/javascript/tree/master/es5). Airbnb's JavaScript style is becoming the community standard, and their `eslint-config-airbnb` is the most-downloaded ESLint config on NPM. Because the main Airbnb ESLint config assumes use of ES6, and edX's JavaScript is primarily written in ES5, this config is an extension of `eslint-config-airbnb-base/legacy`, Airbnb's styleguide for ES5.
 
