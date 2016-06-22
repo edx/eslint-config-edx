@@ -21,7 +21,7 @@
     "no-else-return": "off",
     "no-shadow": "error",
     "object-curly-spacing": ["error", "never"],
-    "one-var": ["warn", "always"],
+    "one-var": ["off"],
     "one-var-declaration-per-line": ["error", "initializations"],
     "quote-props": ["error", "consistent-as-needed"],
     "space-before-function-paren": ["error", "never"],

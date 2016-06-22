@@ -111,18 +111,17 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
         var obj2 = { foo: 42 }
 
 ####[`one-var`](http://eslint.org/docs/rules/one-var)
-- **Setting**: `["warn", "always"]`
-- **Explanation**: Prefer one variable declaration per function. This reinforces awareness of ES5's block scoping and hoisting, which can reduce bugs.
+- **Setting**: `["off"]`
+- **Explanation**: Declare all variables with one `var` statement at the top of your scope, or with many `var`s throughout your scope; your choice. Just don't initialize multiple per line (see next rule).
 - **Example**:
 
-        // Correct pattern
+        // Both correct patterns
         function() {
             var foo, bar, baz,
                 fizz = 'buzz',
                 foz = 49;
         }
 
-        // Linter warning
         function() {
             var fizz = 'buzz';
 
