@@ -111,22 +111,40 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
         var obj2 = { foo: 42 }
 
 ####[`one-var`](http://eslint.org/docs/rules/one-var)
-- **Setting**: `["off"]`
-- **Explanation**: Declare all variables with one `var` statement at the top of your scope, or with many `var`s throughout your scope; your choice. Just don't initialize multiple per line (see next rule).
+- **Setting**: `"off"`
+- **Explanation**: Declare all variables at the top of your scope. You may use a single `var` statement (separating declarations by commas and newlines), or you may use multiple `var` statements. Just don't initialize multiple variables per line (see next rule).
 - **Example**:
 
-        // Both correct patterns
+        // All correct patterns
         function() {
             var foo, bar, baz,
                 fizz = 'buzz',
                 foz = 49;
+
+            if (fizz) {
+                // No more variable declarations below
+            }
         }
 
         function() {
-            var fizz = 'buzz';
+            var foo, bar, baz;
+            var fizz = 'buzz',
+                foz = 49;
 
-            if (foo) {
-                var baz = 'bar';
+            if (fizz) {
+                // No more variable declarations below
+            }
+        }
+
+        function() {
+            var foo;
+            var bar;
+            var baz;
+            var fizz = 'buzz';
+            var foz = 49;
+
+            if (fizz) {
+                // No more variable declarations below
             }
         }
 
