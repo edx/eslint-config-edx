@@ -58,12 +58,14 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: edX is standardized on indenting all code with four spaces. The JavaScript community generally prefers two spaces; edX uses four because of our use of Python (see [PEP8](https://www.python.org/dev/peps/pep-0008/)) and the desire to have consistency in our codebases.
 - **Example**:
 
-        // Correct pattern
-        var example = function() {
-            if (numberOfSpaces !== 4) {
-                throw new Error('Use four spaces for indentation.');
-            }
-        };
+	```javascript
+	// Correct pattern
+	var example = function() {
+	    if (numberOfSpaces !== 4) {
+	        throw new Error('Use four spaces for indentation.');
+	    }
+	};
+	```
 
 ####[`max-len`](http://eslint.org/docs/rules/max-len)
 - **Setting**: `["error", 120]`
@@ -74,149 +76,165 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Explanation**: Disable the rule stating functions can only start with a capital letter if they are constructors.
 - **Example**:
 
-        // Correct pattern
-        var htmlFoo = HtmlUtils.HTML('foo');
+    ```javascript
+    // Correct pattern
+    var htmlFoo = HtmlUtils.HTML('foo');
+    ```
 
 ####[`no-else-return`](http://eslint.org/docs/rules/no-else-return)
 - **Setting**: `"off"`
 - **Explanation**: An `else` block after an `if` which contains a `return` is allowed. Technically the `else` is redundant (and Airbnb disallows it), but this rule allows for more readable control flow.
 - **Example**:
 
-        // Correct pattern
-        if (fooString === 'foo') {
-            return 30;
-        } else {
-            return 50;
-        }
+    ```javascript
+    // Correct pattern
+    if (fooString === 'foo') {
+        return 30;
+    } else {
+        return 50;
+    }
+    ```
 
 ####[`no-shadow`](http://eslint.org/docs/rules/no-shadow)
 - **Setting**: `"error"`
 - **Explanation**: Do not redefine variables in a child scope that are already declared in the upper scope.
 - **Example**:
 
-        // Linter error
-        var foo = 'bar';
-        if (fizz) {
-            var foo = 'buzz';
-        }
+    ```javascript
+    // Linter error
+    var foo = 'bar';
+    if (fizz) {
+        var foo = 'buzz';
+    }
+    ```
 
 ####[`object-curly-spacing`](http://eslint.org/docs/rules/object-curly-spacing)
 - **Setting**: `["error", "never"]`
 - **Explanation**: Do not insert extra spaces inside of curly brackets.
 - **Example**:
 
-        // Correct pattern
-        var obj = {foo: 42};
+    ```javascript
+    // Correct pattern
+    var obj = {foo: 42};
 
-        // Linter error
-        var obj2 = { foo: 42 };
+    // Linter error
+    var obj2 = { foo: 42 };
+    ```
 
 ####[`one-var`](http://eslint.org/docs/rules/one-var)
 - **Setting**: `"off"`
 - **Explanation**: Declare all variables at the top of your scope. You may use a single `var` statement (separating declarations by commas and newlines), or you may use multiple `var` statements. Just don't initialize multiple variables per line (see next rule).
 - **Example**:
 
-        // All correct patterns
-        function() {
-            var foo, bar, baz,
-                fizz = 'buzz',
-                foz = 49;
+    ```javascript
+    // All correct patterns
+    function() {
+        var foo, bar, baz,
+            fizz = 'buzz',
+            foz = 49;
 
-            if (fizz) {
-                // No more variable declarations below
-            }
+        if (fizz) {
+            // No more variable declarations below
         }
+    }
 
-        function() {
-            var foo, bar, baz;
-            var fizz = 'buzz',
-                foz = 49;
+    function() {
+        var foo, bar, baz;
+        var fizz = 'buzz',
+            foz = 49;
 
-            if (fizz) {
-                // No more variable declarations below
-            }
+        if (fizz) {
+            // No more variable declarations below
         }
+    }
 
-        function() {
-            var foo;
-            var bar;
-            var baz;
-            var fizz = 'buzz';
-            var foz = 49;
+    function() {
+        var foo;
+        var bar;
+        var baz;
+        var fizz = 'buzz';
+        var foz = 49;
 
-            if (fizz) {
-                // No more variable declarations below
-            }
+        if (fizz) {
+            // No more variable declarations below
         }
+    }
+    ```
 
 ####[`one-var-declaration-per-line`](http://eslint.org/docs/rules/one-var-declaration-per-line)
 - **Setting**: `["error", "initializations"]`
 - **Explanation**: Variables that are not initialized can be declared on the same line. Only one initialization is allowed per line.
 - **Example**:
 
-        // Correct pattern
-        var foo, bar,
-            fizz = 'buzz',
-            fozz = 'bizz';
+    ```javascript
+    // Correct pattern
+    var foo, bar,
+        fizz = 'buzz',
+        fozz = 'bizz';
 
-        // Linter error
-        var foo, bar, fizz = 'buzz', fozz = 'bizz';
+    // Linter error
+    var foo, bar, fizz = 'buzz', fozz = 'bizz';
+    ```
 
 ####[`quote-props`](http://eslint.org/docs/rules/quote-props)
 - **Setting**: `["error", "consistent-as-needed"]`
 - **Explanation**: If no properties of an object need to be wrapped in quotes (i.e., they are all camelCased strings), then they may remain unwrapped by quotes. If any object property requires quotes, then wrap all object properties in quotes regardless of their individual need for it.
 - **Example**:
 
-        // Correct patterns
-        var foo = {
-            bar: 'buzz',
-            biff: 'bop'
-        };
+    ```javascript
+    // Correct patterns
+    var foo = {
+        bar: 'buzz',
+        biff: 'bop'
+    };
 
-        var foo2 = {
-            'bar': 'buzz',
-            'uh-oh-kebab-cased': 'bop'
-        };
+    var foo2 = {
+        'bar': 'buzz',
+        'uh-oh-kebab-cased': 'bop'
+    };
 
-        // Linter errors
-        var foo = {
-            'bar': 'buzz',
-            'biff': 'bop'
-        };
+    // Linter errors
+    var foo = {
+        'bar': 'buzz',
+        'biff': 'bop'
+    };
 
-        var foo2 = {
-            bar: 'buzz',
-            'uh-oh-kebab-cased': 'bop'
-        };
+    var foo2 = {
+        bar: 'buzz',
+        'uh-oh-kebab-cased': 'bop'
+    };
 
-        // Syntax error
-        var foo2 = {
-            bar: 'buzz',
-            uh-oh-kebab-cased: 'bop'
-        };
+    // Syntax error
+    var foo2 = {
+        bar: 'buzz',
+        uh-oh-kebab-cased: 'bop'
+    };
+    ```
 
 ####[`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 - **Setting**: `["error", "never"]`
 - **Explanation**: Do not add a space between a function and the opening parentheses containing its arguments, whether the function is anonymous or named.
 - **Example**:
 
-        // Correct patterns
-        function foo(arg) {
+    ```javascript
+    // Correct patterns
+    function foo(arg) {
 
-        }
+    }
 
-        var bar = function() {
+    var bar = function() {
 
-        };
+    };
 
-        // Linter errors
-        function foo (arg) {
+    // Linter errors
+    function foo (arg) {
 
-        }
+    }
 
-        var bar = function () {
+    var bar = function () {
 
-        };
+    };
+    ```
 
 ####[`strict`](http://eslint.org/docs/rules/strict)
 - **Setting**: `["error", "function"]`
