@@ -137,10 +137,11 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 
         // Correct pattern
         var foo, bar,
-            fizz = 'buzz';
+            fizz = 'buzz',
+            fozz = 'bizz';
 
         // Linter error
-        var foo, bar, fizz = 'buzz';
+        var foo, bar, fizz = 'buzz', fozz = 'bizz';
 
 ####[`quote-props`](http://eslint.org/docs/rules/quote-props)
 - **Setting**: `["error", "consistent-as-needed"]`
