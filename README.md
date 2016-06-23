@@ -1,4 +1,5 @@
 # edX ESLint config
+[![Build Status](https://travis-ci.org/edx/eslint-config-edx.svg?branch=master)](https://travis-ci.org/edx/eslint-config-edx) [![npm version](https://badge.fury.io/js/eslint-config-edx.svg)](https://badge.fury.io/js/eslint-config-edx)
 
 ESLint config for edX JavaScript code.
 
