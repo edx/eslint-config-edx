@@ -105,10 +105,10 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
 - **Example**:
 
         // Correct pattern
-        var obj = {foo: 42}
+        var obj = {foo: 42};
 
         // Linter error
-        var obj2 = { foo: 42 }
+        var obj2 = { foo: 42 };
 
 ####[`one-var`](http://eslint.org/docs/rules/one-var)
 - **Setting**: `["off"]`
@@ -152,29 +152,29 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
         var foo = {
             bar: 'buzz',
             biff: 'bop'
-        }
+        };
 
         var foo2 = {
             'bar': 'buzz',
             'uh-oh-kebab-cased': 'bop'
-        }
+        };
 
         // Linter errors
         var foo = {
             'bar': 'buzz',
             'biff': 'bop'
-        }
+        };
 
         var foo2 = {
             bar: 'buzz',
             'uh-oh-kebab-cased': 'bop'
-        }
+        };
 
         // Syntax error
         var foo2 = {
             bar: 'buzz',
             uh-oh-kebab-cased: 'bop'
-        }
+        };
 
 ####[`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 - **Setting**: `["error", "never"]`
