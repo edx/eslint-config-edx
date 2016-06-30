@@ -49,6 +49,22 @@ For the most part, edX follows the thoroughly documented [Airbnb JavaScript Styl
 
 In addition to the base Airbnb rules, edX adds or extends several of our own. They are described below.
 
+####[`dollar-sign`](https://github.com/erikdesjardins/eslint-plugin-dollar-sign)
+- **Setting**: `[2, "ignoreProperties"]`
+- **Explanation**: All variables that represent jQuery objects should be named starting with a `$`. Object properties may ignore this rule.
+- **Example**:
+
+    ```javascript
+    // Correct pattern
+    var $fooSpan = $('span#foo');
+
+    var ignoreProps = {};
+    ignoreProps.fooSpan = $('span#foo');
+
+    // Linter error
+    var fooSpan = $('span#foo');
+    ```
+
 ####[`func-names`](http://eslint.org/docs/rules/func-names)
 - **Setting**: `"off"`
 - **Explanation**: Ignore this rule, it doesn't play nicely with RequireJS code.

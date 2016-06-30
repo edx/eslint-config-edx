@@ -13,7 +13,11 @@
   "parserOptions": {
       "ecmaVersion": 5
   },
+  "plugins": [
+    "dollar-sign"
+  ],
   "rules": {
+    "dollar-sign/dollar-sign": [2, "ignoreProperties"],
     "func-names": "off",
     "indent": ["error", 4],
     "max-len": ["error", 120],

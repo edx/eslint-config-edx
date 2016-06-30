@@ -24,6 +24,7 @@
   "dependencies": {
     "eslint": "^2.13.1",
     "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-dollar-sign": "0.0.5",
     "eslint-plugin-import": "^1.9.2"
   },
   "peerDependencies": {
