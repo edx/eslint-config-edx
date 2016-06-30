@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - node
+env:
+  - NPMV=npm@2
+  - NPMV=npm@3
+before_install:
+  - npm install -g $NPMV
+  - npm --version

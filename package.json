@@ -4,7 +4,7 @@
   "description": "ESLint config for edX JavaScript code.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ."
+    "test": "cd test && npm install && npm test && cd ../"
   },
   "repository": {
     "type": "git",
