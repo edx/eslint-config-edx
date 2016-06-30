@@ -17,7 +17,7 @@
     "dollar-sign"
   ],
   "rules": {
-    "dollar-sign/dollar-sign": [2, "ignoreProperties"],
+    "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
     "func-names": "off",
     "indent": ["error", 4],
     "max-len": ["error", 120],
