@@ -1,9 +1,11 @@
 {
+    "name": "eslint-config-edx-test",
+    "version": "0.0.0",
     "scripts": {
-        "test": "./node_modules/.bin/eslint test.js"
+        "test": "eslint test.js"
     },
     "devDependencies": {
-        "eslint-config-edx": "file:../../eslint-config-edx"
+        "eslint-config-edx": "file:../"
     },
     "eslintConfig": {
         "extends": "eslint-config-edx"
