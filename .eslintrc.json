@@ -27,7 +27,6 @@
     "object-curly-spacing": ["error", "never"],
     "one-var": "off",
     "one-var-declaration-per-line": ["error", "initializations"],
-    "quote-props": ["error", "consistent-as-needed"],
     "space-before-function-paren": ["error", "never"],
     "strict": ["error", "function"]
   }
