@@ -192,41 +192,6 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
     var foo, bar, fizz = 'buzz', fozz = 'bizz';
     ```
 
-####[`quote-props`](http://eslint.org/docs/rules/quote-props)
-- **Setting**: `["error", "consistent-as-needed"]`
-- **Explanation**: If no properties of an object need to be wrapped in quotes (i.e., they are all camelCased strings), then they may remain unwrapped by quotes. If any object property requires quotes, then wrap all object properties in quotes regardless of their individual need for it.
-- **Example**:
-
-    ```javascript
-    // Correct patterns
-    var foo = {
-        bar: 'buzz',
-        biff: 'bop'
-    };
-
-    var foo2 = {
-        'bar': 'buzz',
-        'uh-oh-kebab-cased': 'bop'
-    };
-
-    // Linter errors
-    var foo = {
-        'bar': 'buzz',
-        'biff': 'bop'
-    };
-
-    var foo2 = {
-        bar: 'buzz',
-        'uh-oh-kebab-cased': 'bop'
-    };
-
-    // Syntax error
-    var foo2 = {
-        bar: 'buzz',
-        uh-oh-kebab-cased: 'bop'
-    };
-    ```
-
 ####[`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 - **Setting**: `["error", "never"]`
 - **Explanation**: Do not add a space between a function and the opening parentheses containing its arguments, whether the function is anonymous or named.
