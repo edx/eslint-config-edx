@@ -2,7 +2,7 @@
     "name": "eslint-config-edx-test",
     "version": "0.0.0",
     "scripts": {
-        "test": "eslint test.js"
+        "test": "eslint ."
     },
     "devDependencies": {
         "eslint-config-edx": "file:../"

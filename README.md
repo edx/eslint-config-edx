@@ -218,6 +218,47 @@ In addition to the base Airbnb rules, edX adds or extends several of our own. Th
     ```
 
 ####[`strict`](http://eslint.org/docs/rules/strict)
-- **Setting**: `["error", "function"]`
-- **Explanation**: Every top-level function declaration must have a `'use strict';` in it. Do not use `'use strict';` anywhere else.
-- **Example**: See the [ESLint `strict` rule docs](http://eslint.org/docs/rules/strict) and the [MDN strict mode docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+- **Setting**: `["error", "safe"]`
+- **Explanation**: If you're writing code that will run in the browser (i.e., AMD modules used by RequireJS), every top-level function declaration must have a `'use strict';` in it. Do not use `'use strict';` anywhere else. If you're writing code that will run in Node (i.e., a CommonJS module, Karma config or Gulp task), use a single `'use strict';` at global scope at the top of the module.
+- **Example**:
+	- For browser code:
+
+	    ```javascript
+	    (function(define) {
+	        'use strict';
+
+	        define(['foo'], function(foo) {
+	            foo();
+	        });
+	    }());
+		```
+
+	- For Node code:
+
+	    ```javascript
+	    /* eslint-env node */
+	    'use strict';
+	    var foo = require('foo');
+	    foo();
+	    ```
+
+		Instead of a `/* eslint-env node */` directive, you can also tell ESLint that a directory of `.js` files should be treated as Node-specific code with a directory-specific `.eslintrc.json`:
+
+	    ```
+	    project
+	    ├── .eslintrc.json
+	    ├── browser
+	    │   └── amd-module.js
+	    └── node
+	        ├── .eslintrc.json
+            ├── commonjs-module-1.js
+	        └── commonjs-module-2.js
+	    ```
+
+		`project/node/.eslintrc.json`:
+
+	    ```
+	    {
+	        "env": "node"
+	    }
+	    ```
