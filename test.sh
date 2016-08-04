@@ -35,4 +35,6 @@ npm install
 # Make sure eslint can run with our config
 npm test
 
+rm -rf nodeenv
+
 popd test

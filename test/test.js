@@ -1,19 +1,31 @@
-(function() {
+(function(root, factory) {
     'use strict';
 
-    var propertyQuote = {
-            bar: 'buzz',
-            'mixed-quote-prop': 'mixed quotes are ok!'
-        },
-        simpleESLintTest = 'This file should have no errors';
-
-    if (propertyQuote.bar === 'X') {
-        return false;
+    if (typeof define === 'function' && define.amd) {
+        // Export as AMD, for RequireJS
+        define([], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Export as CommonJS, for Node
+        module.exports = factory();
     }
+}(this, function() {
+    'use strict';
 
-    if (simpleESLintTest.charAt(0) === 'X') {
-        return false;
-    }
+    return function() {
+        var propertyQuote = {
+                bar: 'buzz',
+                'mixed-quote-prop': 'mixed quotes are ok!'
+            },
+            simpleESLintTest = 'This file should have no errors';
 
-    return true;
-}());
+        if (propertyQuote.bar === 'X') {
+            return false;
+        }
+
+        if (simpleESLintTest.charAt(0) === 'X') {
+            return false;
+        }
+
+        return true;
+    };
+}));
