@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1 (2016-08-04)
+* Change `strict` rule from `"function"` to `"safe"`.
+
 ## 1.2.0 (2016-07-08)
 * Removed quote-props rule (defaults to as-needed).
 
