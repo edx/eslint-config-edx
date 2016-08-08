@@ -49,6 +49,27 @@ For the most part, edX follows the thoroughly documented [Airbnb JavaScript Styl
 
 In addition to the base Airbnb rules, edX adds or extends several of our own. They are described below.
 
+####[`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
+- **Setting**: `["error", "always-multiline"]`
+- **Explanation**: In objects split onto multiple lines, the last key/value pair should have a trailing comma. This makes diffs cleaner, and follows Airbnb's recommendation for code that doesn't need to support IE8.
+- **Example**:
+
+    ```javascript
+    // Correct pattern
+    var correct = {
+        foo: 'foo',
+        bar: 'bar',
+    }
+
+    var alsoCorrect = { foo: 'foo', bar: 'bar' };
+
+    // Linter error
+    var incorrect = {
+        foo: 'foo',
+        bar: 'bar'
+    }
+    ```
+
 ####[`dollar-sign`](https://github.com/erikdesjardins/eslint-plugin-dollar-sign)
 - **Setting**: `["error", "ignoreProperties"]`
 - **Explanation**: All variables that represent jQuery objects should be named starting with a `$`. Object properties may ignore this rule.
