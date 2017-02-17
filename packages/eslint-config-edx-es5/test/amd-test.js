@@ -1,7 +1,7 @@
 (function(define) {
     'use strict';
 
-    define(['./test.js'], (test) => {
+    define(['./test.js'], function(test) {
         test();
     });
 }());

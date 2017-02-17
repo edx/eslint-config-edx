@@ -1,0 +1,13 @@
+{
+    "name": "eslint-config-edx-es5-test",
+    "version": "0.0.0",
+    "scripts": {
+        "test": "eslint ."
+    },
+    "devDependencies": {
+        "eslint-config-edx-es5": "file:../"
+    },
+    "eslintConfig": {
+        "extends": "eslint-config-edx-es5"
+    }
+}

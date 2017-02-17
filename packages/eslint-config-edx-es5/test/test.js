@@ -8,13 +8,13 @@
         // Export as CommonJS, for Node
         module.exports = factory();
     }
-}(this, () => {
+}(this, function() {
     'use strict';
 
-    return () => {
-        const propertyQuote = {
+    return function() {
+        var propertyQuote = {
                 bar: 'buzz',
-                'mixed-quote-prop': 'mixed quotes are ok!',
+                'mixed-quote-prop': 'mixed quotes are ok!'
             },
             simpleESLintTest = 'This file should have no errors';
 
