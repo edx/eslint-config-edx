@@ -3,6 +3,8 @@
 
 This is the edX ESLint shareable config for linting ES5 JavaScript. See [`eslint-config-edx`](https://npmjs.com/package/eslint-config-edx) if you need to lint ES2015+ code.
 
+Note that versions of this config prior to v2.0.0 are INCOMPATIBLE with eslint-config-edx.
+
 edX maintains high-level documentation on the [Open edX Developer's Guide](http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/user_interface_development.html?highlight=ux#adding-a-ui-page) on how we write new JavaScript features, including our use of RequireJS, Underscore and Backbone. This document seeks to be a lower-level guide on the semantics of how we write ES5 JavaScript, including nuts and bolts about spacing, syntax, and variable naming.
 
 For the most part, edX follows the thoroughly documented [Airbnb JavaScript Style Guide for ES5](https://github.com/airbnb/javascript/tree/es5-deprecated/es5). Airbnb's JavaScript style is becoming the community standard, and their `eslint-config-airbnb` is the most-downloaded ESLint config on NPM. Because the main Airbnb ESLint config assumes use of ES6, and edX's JavaScript is primarily written in ES5, this config is an extension of `eslint-config-airbnb-base/legacy`, Airbnb's styleguide for ES5. Some of our rules also reference the [Airbnb ES6 styleguide](http://airbnb.io/javascript/), the more modern and currently supported version.

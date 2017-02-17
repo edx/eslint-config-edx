@@ -15,7 +15,7 @@ ESLint configs for edX JavaScript code.
 
 In order to standardize and enforce edX's JavaScript coding style across multiple codebases, edX has adopted ESLint and these shared ESLint configs. Two configs are published from this repository:
 
-- `esling-config-edx`, for linting ES2015+ code
+- `eslint-config-edx`, for linting ES2015+ code
 - `eslint-config-edx-es5`, for linting ES5 code
 
 ## License
@@ -25,11 +25,11 @@ noted. Please see the [LICENSE file](https://github.com/edx/eslint-config-edx/bl
 
 ## Dependencies
 
-[ESLint](http://eslint.org) is required to use either config, as they are [ESLint shareable configs](http://eslint.org/docs/developer-guide/shareable-configs).
+[ESLint](http://eslint.org) is required to use either config, and NodeJS 4.0 or greater is required to use ESLint. Both configs are tested with the Node version bundled in the [most recent edX devstack setup](http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/installation/devstack/install_devstack.html).
 
 ## Usage
 
-To begin using the edX ESLint configs in a codebase, the install the desired config from NPM:
+To begin using the edX ESLint configs in a codebase, install the desired config from NPM:
 
     npm install --save-dev eslint-config-edx
 

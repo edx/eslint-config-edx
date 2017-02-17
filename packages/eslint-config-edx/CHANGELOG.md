@@ -1,8 +1,8 @@
 # Changelog
 
-## 2.0.0-beta.1 (WIP)
+## 2.0.0 (02-24-2017)
 * Update for compatibility with ES2015+
-* Upgrade peerDependencies, including ESLint to v3
+* Upgrade dependencies, including ESLint to v3
 * Move ES5 config to new package, eslint-config-edx-es5
 
 ## 1.2.1 (2016-08-04)
