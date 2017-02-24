@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-edx",
+  "version": "2.0.0",
+  "description": "ESLint config for edX JavaScript ES2015+ code.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edx/eslint-config-edx.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "edx",
+    "mooc"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/edx/eslint-config-edx/issues"
+  },
+  "homepage": "https://github.com/edx/eslint-config-edx/blob/master/packages/eslint-config-edx/README.md",
+  "dependencies": {
+    "eslint": "^3.16.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-dollar-sign": "1.0.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}

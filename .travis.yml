@@ -1,8 +1,10 @@
 language: node_js
-node_js:
-  - node
 env:
-  - NPMV=2
-  - NPMV=3
+  matrix:
+    - PACKAGE=eslint-config-edx-es5
+    - PACKAGE=eslint-config-edx
+  global:
+    - NODEV=6.9.4
+    - NPMV=3.10.0
 script:
   - ./test.sh

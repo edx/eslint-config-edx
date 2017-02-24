@@ -1,0 +1,23 @@
+{
+    "env": {
+        "amd": true,
+        "browser": true,
+        "es6": true,
+        "jasmine": true,
+        "jquery": true
+    },
+    "extends": "airbnb-base",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "globalReturn": false
+        },
+        "sourceType": "script"
+    },
+    "plugins": [
+        "dollar-sign"
+    ],
+    "rules": {
+        "dollar-sign/dollar-sign": ["error", "ignoreProperties"]
+    }
+}
