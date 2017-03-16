@@ -2,6 +2,6 @@
 
 'use strict';
 
-const test = require('./test.js');
+const test = require('../test.js');
 
 test();

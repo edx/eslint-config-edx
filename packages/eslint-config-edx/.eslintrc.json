@@ -8,11 +8,7 @@
     },
     "extends": "airbnb-base",
     "parserOptions": {
-        "ecmaVersion": 8,
-        "ecmaFeatures": {
-            "globalReturn": false
-        },
-        "sourceType": "script"
+        "ecmaVersion": 8
     },
     "plugins": [
         "dollar-sign"
