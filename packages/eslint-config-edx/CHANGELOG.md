@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1 (03-31-2017)
+* Fix linting of ES2015 modules
+
 ## 2.0.0 (02-24-2017)
 * Update for compatibility with ES2015+
 * Upgrade dependencies, including ESLint to v3
