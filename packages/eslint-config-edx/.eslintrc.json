@@ -18,6 +18,7 @@
     ],
     "rules": {
         "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
-        "react/no-array-index-key": "off"
+        "react/no-array-index-key": "off",
+        "strict": "off"
     }
 }
