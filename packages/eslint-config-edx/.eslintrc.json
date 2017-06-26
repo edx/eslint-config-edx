@@ -6,14 +6,18 @@
         "jasmine": true,
         "jquery": true
     },
-    "extends": "airbnb-base",
+    "extends": "airbnb",
     "parserOptions": {
-        "ecmaVersion": 8
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+          "jsx": true
+        }
     },
     "plugins": [
         "dollar-sign"
     ],
     "rules": {
-        "dollar-sign/dollar-sign": ["error", "ignoreProperties"]
+        "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
+        "strict": "off"
     }
 }
