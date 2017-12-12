@@ -18,6 +18,7 @@
     ],
     "rules": {
         "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
+        "indent": ["error", 4],
         "strict": "off",
         "class-methods-use-this": "off"
     }
