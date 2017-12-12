@@ -24,3 +24,17 @@ For the most part, edX follows the thoroughly documented [Airbnb JavaScript Styl
     // Linter error
     const fooSpan = $('span#foo');
     ```
+
+####[`indent`](http://eslint.org/docs/rules/indent)
+- **Setting**: `["error", 4]`
+- **Explanation**: edX is standardized on indenting all code with four spaces. The JavaScript community generally prefers two spaces; edX uses four because of our use of Python (see [PEP8](https://www.python.org/dev/peps/pep-0008/)) and the desire to have consistency in our codebases.
+- **Example**:
+
+	```javascript
+	// Correct pattern
+	var example = function() {
+	    if (numberOfSpaces !== 4) {
+	        throw new Error('Use four spaces for indentation.');
+	    }
+	};
+	```
