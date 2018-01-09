@@ -4,7 +4,7 @@ env:
     - PACKAGE=eslint-config-edx-es5
     - PACKAGE=eslint-config-edx
   global:
-    - NODEV=6.9.4
-    - NPMV=3.10.0
+    - NODEV=8.9.3
+    - NPMV=5.5.1
 script:
   - ./test.sh

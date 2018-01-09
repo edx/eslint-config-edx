@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-edx",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "ESLint config for edX JavaScript ES2015+ code.",
   "main": "index.js",
   "repository": {
