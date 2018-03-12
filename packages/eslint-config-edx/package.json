@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-edx",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "ESLint config for edX JavaScript ES2015+ code.",
   "main": "index.js",
   "repository": {
@@ -20,10 +20,10 @@
   "homepage": "https://github.com/edx/eslint-config-edx/blob/master/packages/eslint-config-edx/README.md",
   "dependencies": {
     "eslint": "^3.16.0",
-    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-airbnb": "15.0.1",
     "eslint-plugin-dollar-sign": "1.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-react": "7.1.0"
   }
 }
