@@ -1,7 +1,10 @@
 # edX ESLint configs
+
 [![Build Status](https://travis-ci.org/edx/eslint-config-edx.svg?branch=master)](https://travis-ci.org/edx/eslint-config-edx)
 
 ESLint configs for edX JavaScript code.
+
+Please tag **@edx/fedx-team** on any PRs or issues.
 
 ## Table of Contents
 
@@ -15,8 +18,8 @@ ESLint configs for edX JavaScript code.
 
 In order to standardize and enforce edX's JavaScript coding style across multiple codebases, edX has adopted ESLint and these shared ESLint configs. Two configs are published from this repository:
 
-- `eslint-config-edx`, for linting ES2015+ code
-- `eslint-config-edx-es5`, for linting ES5 code
+- `eslint-config-edx`, for linting `ES2015+` code
+- `eslint-config-edx-es5`, for linting `ES5` code
 
 ## License
 
@@ -39,12 +42,14 @@ or
 
 Then, configure your project's ESLint config to extend `eslint-config-edx` or `eslint-config-edx-es5` (see the ESLint docs on [Using a Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)). If you do not plan on adding custom rules beyond those in `eslint-config-edx` to your project, the easiest place to configure this is probably in your `package.json`:
 
-    "devDependencies": {
-        "eslint-config-edx": "^2.0.0"
-    },
-    "eslintConfig": {
-        "extends": "eslint-config-edx"
-    }
+```json
+"devDependencies": {
+    "eslint-config-edx": "^2.0.0"
+},
+"eslintConfig": {
+    "extends": "eslint-config-edx"
+}
+```
 
 If you plan on adding additional customization, you can [configure your project with an `.eslintrc.js`/`.eslintrc.json` file](http://eslint.org/docs/user-guide/configuring#configuration-file-formats).
 
@@ -52,5 +57,5 @@ If you plan on adding additional customization, you can [configure your project 
 
 More documentation on the rules specified by each config is available in:
 
-- [the README for `eslint-config-edx`](https://github.com/edx/eslint-config-edx/blob/master/packages/eslint-config-edx/README.md)
-- [the README for `eslint-config-edx-es5`](https://github.com/edx/eslint-config-edx/blob/master/packages/eslint-config-edx-es5/README.md)
+- [the `eslint-config-edx` `README`](https://github.com/edx/eslint-config-edx/blob/master/packages/eslint-config-edx/README.md)
+- [the `eslint-config-edx-es5` `README`](https://github.com/edx/eslint-config-edx/blob/master/packages/eslint-config-edx-es5/README.md)
