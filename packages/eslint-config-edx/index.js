@@ -1,1 +1,24 @@
-module.exports = require('./.eslintrc.json');
+module.exports = {
+  env: {
+    amd: true,
+    browser: true,
+    es6: true,
+    jasmine: true,
+    jquery: true,
+  },
+  extends: 'airbnb',
+  parserOptions: {
+    ecmaVersion: 8,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: [
+    'dollar-sign',
+  ],
+  rules: {
+    'dollar-sign/dollar-sign': ['error', 'ignoreProperties'],
+    strict: 'off',
+    'class-methods-use-this': 'off',
+  },
+};
