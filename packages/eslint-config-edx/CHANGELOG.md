@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.0.4 (2018-07-05)
+* Pin eslint-plugin-jsx-a11y to 6.0.3
+
 ## 2.0.1 (03-31-2017)
 * Fix linting of ES2015 modules
 
