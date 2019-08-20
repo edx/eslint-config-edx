@@ -19,6 +19,7 @@
     "rules": {
         "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
         "strict": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "curly": ["error", "all"]
     }
 }
