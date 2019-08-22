@@ -8,12 +8,3 @@ env:
     - NPMV=5.5.1
 script:
   - "./test.sh"
-deploy:
-  provider: npm
-  email: oscm@edx.org
-  api_key:
-    secure: bh84eZAxUd4GR6a2Iik5mMSFHrfTqA9AqJrBkmV5Selv8yYMIWLk8TAdRjPQgtRQejr9cNvFAYdlwicXasJzIt9a/lS630Rtf3Y8vFiLL4hJs9QSkKPmbWuFBBNzNSBIgj8l/i8m/ZTkYGoPIFncQrhDzY/m8wiukvqxlXdLC8pw8IAVglN2ncUx9CDoBZ35zvHaKZAYJ+kxLtmlxjYt6S1zldv/sBcvOJSlJRozt65WAu0zx8v0UuCXm/BuLDnyRM3BL9mYh4+s4f8PlIcfHHRgDZlpBnhAkzCoE1KqCoibJAV6RZDQvKrDdD+I3EDhcFSgrLxkL5hKoNn5HolN8lKYwJoC9CTc0Vj2+8f/lUIRNSEigqdAvVilW5xXubALpPIClHKsB+SM9QyaOyg8clmeclrWcYJCqFMBL3pXyfJu5aZAkxf84/AbEOJQstebGzRCEFOvaggMNBlk6JPW8XiORPbOy/WNbjw4Cw+AW6OAKBOOnWTuUHEX9cDQ8MdnFTykUjlVEXSvjBW/A7j35HykqhG5INr0i5wNpTbKl4HVZGnhv4BnYSG5kDeu9HoB9D8PNSsVr9BfsDsrliQiDJcKcpcWQtZPIyjRpolpL23sZCvglA19DhR1UjalyPnTOYsvWtNd/C0dyYPifmXFt9UHvLGqMocPif9NfIsFTxw=
-  skip_cleanup: true
-  on:
-    tags: true
-    branch: master
