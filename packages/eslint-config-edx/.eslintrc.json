@@ -17,9 +17,21 @@
         "dollar-sign"
     ],
     "rules": {
-        "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
-        "strict": "off",
         "class-methods-use-this": "off",
-        "curly": ["error", "all"]
+        "curly": ["error", "all"],
+        "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
+        "max-len": [
+          "error",
+          120,
+          2,
+          {
+            "ignoreUrls": true,
+            "ignoreComments": false,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+          }
+        ],
+        "strict": "off"
     }
 }
