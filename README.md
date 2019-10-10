@@ -25,7 +25,7 @@ noted. Please see the [LICENSE file](https://github.com/edx/eslint-config-edx/bl
 
 ## Dependencies
 
-[ESLint](http://eslint.org) is required to use either config, and NodeJS 4.0 or greater is required to use ESLint. Both configs are tested with the Node version bundled in the [most recent edX devstack setup](http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/installation/devstack/install_devstack.html).
+[ESLint](http://eslint.org) is required to use either config, and NodeJS 4.0 or greater is required to use ESLint. Both configs are tested with the Node version bundled in the [most recent edX devstack setup](http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/installation/install_devstack.html).
 
 ## Usage
 
