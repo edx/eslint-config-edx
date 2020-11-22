@@ -4,7 +4,7 @@
 Its functionality has been moved into a new package, [@edx/eslint-config](https://github.com/edx/eslint-config), which should be used for frontend linting going forward. Please contact @edx/fedx-team with any questions.
 
 # edX ESLint configs
-[![Build Status](https://travis-ci.org/edx/eslint-config-edx.svg?branch=master)](https://travis-ci.org/edx/eslint-config-edx)
+[![Build Status](https://travis-ci.com/edx/eslint-config-edx.svg?branch=master)](https://travis-ci.com/edx/eslint-config-edx)
 
 ESLint configs for edX JavaScript code.
 
